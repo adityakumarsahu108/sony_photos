@@ -44,7 +44,7 @@ const Main = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
             <h2>
-              I'm <span>Aditya Kumar Sahu</span>, an Amateur Photographer from Bengaluru
+              I'm <span>Aditya Kumar Sahu</span> an Amateur Photographer from Bengaluru
             </h2>
             
             <p>
