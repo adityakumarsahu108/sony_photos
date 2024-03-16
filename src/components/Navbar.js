@@ -17,7 +17,11 @@ const mobileNavToggle = () => {
     mobileNavHide.classList.toggle("d-none");
   }
 };
+const mobNavHide =()=>{
+  const mobileNavHide = document.querySelector(".mobile-nav-hide");
+  mobileNavHide.classList.toggle("d-none");
 
+}
 const Navbar = () => {
   useEffect(() => {
     // Mobile nav toggle
@@ -72,20 +76,20 @@ const Navbar = () => {
             <nav id="navbar" className="navbar">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={{mobNavHide}}>Home</Link>
                 </li>
                 <li>
-                  <Link to="/about" className="active">
+                  <Link to="/about" className="active" onClick={{mobNavHide}}>
                     About
                   </Link>
                 </li>
                 <li >
-                  <Link to="/gallery" className="active">
+                  <Link to="/gallery" className="active" onClick={{mobNavHide}}>
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="active">
+                  <Link to="/contact" className="active" onClick={{mobNavHide}}>
                     Contact
                   </Link>
                 </li>
