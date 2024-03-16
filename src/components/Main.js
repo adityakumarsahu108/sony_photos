@@ -43,7 +43,7 @@ const Main = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
-            <h2>
+            <h2 style={{fontSize:"30px"}}>
               I'm <span>Aditya Kumar Sahu</span> an Amateur Photographer from Bengaluru
             </h2>
             
