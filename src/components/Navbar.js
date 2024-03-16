@@ -1,33 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import '../App.css';
 
-
-const mobileNavToggle = () => {
-  const bodyElement = document.querySelector("body");
-  const mobileNavShow = document.querySelector(".mobile-nav-show");
-  const mobileNavHide = document.querySelector(".mobile-nav-hide");
-
-  if (bodyElement) {
-    bodyElement.classList.toggle("mobile-nav-active");
-  }
-
-  if (mobileNavShow && mobileNavHide) {
-    mobileNavShow.classList.toggle("d-none");
-    mobileNavHide.classList.toggle("d-none");
-  }
-};
-
 const Navbar = () => {
-  useEffect(() => {
-    // Mobile nav toggle
-    document.querySelectorAll(".mobile-nav-toggle").forEach((el) => {
-      el.addEventListener("click", function (event) {
-        event.preventDefault();
-        mobileNavToggle();
-      });
-    });
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
 
+  const mobileNavToggle = () => {
+    setIsMobileNavActive(!isMobileNavActive);
+  };
+
+  const closeMobileNav = () => {
+    setIsMobileNavActive(false);
+  };
+
+  useEffect(() => {
     // Hide mobile nav on same-page/hash links
     document.querySelectorAll("#navbar a").forEach((navbarlink) => {
       if (!navbarlink.hash) return;
@@ -36,29 +22,11 @@ const Navbar = () => {
       if (!section) return;
 
       navbarlink.addEventListener("click", () => {
-        if (document.querySelector(".mobile-nav-active")) {
-          mobileNavToggle();
-        }
+        closeMobileNav();
       });
     });
+  }, []);
 
-    // Toggle mobile nav dropdowns
-    const navDropdowns = document.querySelectorAll(".navbar .dropdown > a");
-
-    navDropdowns.forEach((el) => {
-      el.addEventListener("click", function (event) {
-        if (document.querySelector(".mobile-nav-active")) {
-          event.preventDefault();
-          this.classList.toggle("active");
-          this.nextElementSibling.classList.toggle("dropdown-active");
-
-          let dropDownIndicator = this.querySelector(".dropdown-indicator");
-          dropDownIndicator.classList.toggle("bi-chevron-up");
-          dropDownIndicator.classList.toggle("bi-chevron-down");
-        }
-      });
-    });
-  }, []); 
   return (
     <>
       <div>
@@ -69,31 +37,31 @@ const Navbar = () => {
               <i className="bi bi-camera" />
               <h1>Aditya kumar sahu</h1>
             </Link>
-            <nav id="navbar" className="navbar">
+            <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={closeMobileNav}>Home</Link>
                 </li>
                 <li>
-                  <Link to="/about" className="active">
+                  <Link to="/about" className="active" onClick={closeMobileNav}>
                     About
                   </Link>
                 </li>
-                <li >
-                  <Link to="/gallery" className="active">
+                <li>
+                  <Link to="/gallery" className="active" onClick={closeMobileNav}>
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="active">
+                  <Link to="/contact" className="active" onClick={closeMobileNav}>
                     Contact
                   </Link>
                 </li>
               </ul>
             </nav>
             {/* .navbar */}
-            <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
-            <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
+            <i className="mobile-nav-toggle mobile-nav-show bi bi-list" onClick={mobileNavToggle} />
+            <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onClick={mobileNavToggle} />
           </div>
         </header>
         {/* End Header */}
