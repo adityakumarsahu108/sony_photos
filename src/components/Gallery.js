@@ -60,18 +60,18 @@ const Gallery = () => {
                   </div>{/* End Gallery Item */}
                   <div className="col-xl-3 col-lg-4 col-md-6">
                     <div className="gallery-item h-100">
-                      <img src="assets/img/gallery/gallery-3.jpg" className="img-fluid" alt='' />
+                      <img src="assets/img/gallery/gallery-10.jpg" className="img-fluid" alt='' />
                       <div className="gallery-links d-flex align-items-center justify-content-center">
-                        <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 2" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
+                        <a href="assets/img/gallery/gallery-10.jpg" title="Gallery 2" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
 
                       </div>
                     </div>
                   </div>{/* End Gallery Item */}
                   <div className="col-xl-3 col-lg-4 col-md-6">
                     <div className="gallery-item h-100">
-                      <img src="assets/img/gallery/gallery-10.jpg" className="img-fluid" alt='' />
+                      <img src="assets/img/gallery/gallery-15.jpg" className="img-fluid" alt='' />
                       <div className="gallery-links d-flex align-items-center justify-content-center">
-                        <a href="assets/img/gallery/gallery-10.jpg" title="Gallery 3" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
+                        <a href="assets/img/gallery/gallery-15.jpg" title="Gallery 3" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
 
                       </div>
                     </div>
@@ -318,9 +318,9 @@ const Gallery = () => {
                   </div>{/* End Gallery Item */}
                   <div className="col-xl-3 col-lg-4 col-md-6">
                     <div className="gallery-item h-100">
-                      <img src="assets/img/gallery/gallery-18.jpg" className="img-fluid" alt='' />
+                      <img src="assets/img/gallery/gallery-13.jpg" className="img-fluid" alt='' />
                       <div className="gallery-links d-flex align-items-center justify-content-center">
-                        <a href="assets/img/gallery/gallery-18.jpg" title="Gallery 16" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
+                        <a href="assets/img/gallery/gallery-13.jpg" title="Gallery 16" className="glightbox preview-link"><i className="bi bi-arrows-angle-expand" /></a>
 
                       </div>
                     </div>

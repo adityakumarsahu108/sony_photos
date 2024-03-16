@@ -21,7 +21,7 @@ function Contact() {
           </div>
         </div>
 
-        {/* Camera Specifications Card */}
+        {/* Camera Specifications Card
         <div className="card">
           <div className="card2">
             <h2 className="label-area" style={{ fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif', color: 'grey' }}>Camera Specifications</h2>
@@ -29,7 +29,7 @@ function Contact() {
             <p className="content-media">Lens Type: Telephoto 55-210mm, wide-angle 18-50mm, prime lens 50mm,85mm</p>
             <p className="content-media">Adapters: Nikon to e-mount</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
