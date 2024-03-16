@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Remove overflow-x since it's not needed */
+  display: flex;
+  justify-content: center;
+  /* Center the card container horizontally */
+  align-items: center;
+  /* Center the card container vertically */
+
+}
+
+.vanta-bg {
+  position: absolute;
+  /* Change to fixed positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.card-container {
+  position: absolute;
+  /* Forcefully position the card container */
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Center the container precisely */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.card {
+  width: 410px;
+  /* Adjust card width */
+  height: 350px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  position: relative;
+  transition: all .3s;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.card2 {
+  width: 405px;
+  /* Adjust card width */
+  height: 350px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.card:hover {
+  transform: scale(0.98);
+}
+
+.card2:hover {
+  transform: scale(0.98);
+}
+
+.content-media {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content-media:hover {
+  color: #00ff75;
+}
